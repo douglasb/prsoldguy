@@ -1,7 +1,6 @@
 backend:
-name: github
-   repo:douglasb/prsoldguy
-media_folder: static/assets
+  name: github
+  repo: douglasb/prsoldguy
 media_folder: static/assets
 public_folder: assets
 collections:
