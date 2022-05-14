@@ -14,7 +14,21 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        name: `markdown-pages`,
+        path: `${__dirname}/content/blog`,
       },
+      resolve: `gatsby-transformer-remark`,
+      options: {
+         plugins: [
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              // Path to your Netlify CMS config file
+              cmsConfig: `/static/admin/config.yml`,
+            },
+          },
+        ],
+     },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
